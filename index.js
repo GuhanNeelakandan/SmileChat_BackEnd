@@ -7,7 +7,6 @@ const socket=require("socket.io")
 
 
 const app=express();
-require('dotenv').config();
 
 const PORT =process.env.PORT || 8080
 
@@ -33,7 +32,7 @@ const server =app.listen(PORT,()=>{
 })
 const io=socket(server,{
   cors:{
-    origin:"*",
+    origin: "*",
     credentials: true,
   }
 })
