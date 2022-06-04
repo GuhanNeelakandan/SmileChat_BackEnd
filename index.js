@@ -17,7 +17,7 @@ app.use(express.json())
 app.use('/',userRoute)
 app.use('/', messageRoutes);
 
-mongoose.connect(process.env.MONGO_URL,{
+mongoose.connect("mongodb+srv://Guhan:guhan@cluster0.gubnl.mongodb.net/smilechat?retryWrites=true&w=majority",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
