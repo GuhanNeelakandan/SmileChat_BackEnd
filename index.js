@@ -9,6 +9,8 @@ const socket=require("socket.io")
 const app=express();
 require('dotenv').config();
 
+const PORT =process.env.PORT || 8080
+
 app.use(cors())
 app.use(express.json())
 
@@ -26,8 +28,8 @@ mongoose.connect(process.env.MONGO_URL,{
     console.log(err.message);
   });
 
-const server =app.listen(process.env.PORT,()=>{
-    console.log(`server started on Port ${process.env.PORT}`)
+const server =app.listen(PORT,()=>{
+    console.log(`server started on Port ${PORT}`)
 })
 const io=socket(server,{
   cors:{
