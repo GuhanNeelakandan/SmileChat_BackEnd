@@ -5,10 +5,9 @@ const userRoute = require("./routes/userRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const socket=require("socket.io")
 
+const PORT =process.env.PORT || 8080
 
 const app=express();
-
-const PORT =process.env.PORT || 8080
 
 app.use(cors())
 app.use(express.json())
